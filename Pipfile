@@ -9,6 +9,11 @@ flask-sqlalchemy = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 openai = "*"
+pylint = "*"
+tiktoken = "*"
+faiss-cpu = "*"
+flask-assets = "*"
+chromadb = "*"
 
 [dev-packages]
 
