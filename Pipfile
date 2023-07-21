@@ -4,18 +4,20 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+langchain = "*"
 flask = "*"
+tiktoken = "*"
+faiss-cpu = "*"
 flask-sqlalchemy = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 openai = "*"
 pylint = "*"
-tiktoken = "*"
-faiss-cpu = "*"
 flask-assets = "*"
-chromadb = "*"
+transformers = "*"
+textract = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.11"

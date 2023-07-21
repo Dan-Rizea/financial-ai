@@ -13,7 +13,7 @@ api_key = os.getenv('FinancialAIKey')
 # Advanced method - Split by chunk
 
 # Convert PDF to text
-doc = textract.process("C:\\Users\\40770\\financial-ai\\economic_activities_logic\\Classified_CAEN_PDF.pdf")
+doc = textract.process("C:\\Users\\Dan\\source\\repos\\financial-ai-1\\Classified_CAEN_v2.pdf")
 
 # Save to .txt and reopen (helps prevent issues)
 with open('Classified_CAEN_PDF.txt', 'w', encoding="utf-8") as f:
