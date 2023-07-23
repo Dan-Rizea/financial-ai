@@ -1,17 +1,16 @@
 """Main starting point"""
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_marshmallow import Marshmallow
 from financial_ai.routes import routes_bp
+from flask_migrate import Migrate
 from config import Config
 
 # Init app
 app = Flask(__name__)
-
 app.config.from_object(Config)
 
 db = SQLAlchemy(app)
-ma = Marshmallow(app)
+migrate = Migrate(app, db)
 
 app.register_blueprint(routes_bp)
 

@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 langchain = "*"
-flask = "*"
 tiktoken = "*"
 faiss-cpu = "*"
 flask-sqlalchemy = "*"
@@ -16,6 +15,10 @@ pylint = "*"
 flask-assets = "*"
 transformers = "*"
 textract = "*"
+flask = {version = "*", extras = ["async"]}
+pymysql = "*"
+cryptography = "*"
+flask-migrate = "*"
 
 [dev-packages]
 
