@@ -1,4 +1,6 @@
-from financial_ai.models import db
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
 
 class Documents(db.Model):
     __tablename__ = "Documents"

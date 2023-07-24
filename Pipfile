@@ -19,6 +19,9 @@ flask = {version = "*", extras = ["async"]}
 pymysql = "*"
 cryptography = "*"
 flask-migrate = "*"
+flask-script = "*"
+pypdf = "*"
+chromadb = "*"
 
 [dev-packages]
 
