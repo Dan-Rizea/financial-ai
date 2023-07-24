@@ -1,4 +1,4 @@
-"""Used in creating embeddings for the CAEN module"""
+"""Embed PDFs into Chroma Vectoral DB from documents folder"""
 import os
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -9,7 +9,6 @@ from langchain.vectorstores import Chroma
 
 api_key = os.getenv('FinancialAIKey')
 
-"""Embed PDFs into Chroma Vectoral DB"""
 loader = DirectoryLoader('C:/Users/Dan/source/repos/financial-ai-1/documents/', glob="./*.pdf", loader_cls=PyPDFLoader)
 documents = loader.load()
 

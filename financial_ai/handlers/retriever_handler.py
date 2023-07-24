@@ -37,3 +37,5 @@ async def retrieve_embedded_data(prompt):
 
     llm_response = qa_chain(prompt)
     process_llm_response(llm_response)
+
+    return llm_response['result']
