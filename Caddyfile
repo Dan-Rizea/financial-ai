@@ -1,3 +1,7 @@
-http://188.241.118.67 {
+www.financialai.eu {
+    redir https://financialai.eu{uri}
+}
+
+financialai.eu {
     reverse_proxy localhost:8000
 }
