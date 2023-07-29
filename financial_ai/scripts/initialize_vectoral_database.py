@@ -1,5 +1,6 @@
 """Embed PDFs into Chroma Vectoral DB from documents folder"""
 import os
+import sys
 from transformers import GPT2TokenizerFast
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -8,10 +9,20 @@ from langchain.vectorstores import Chroma
 
 api_key = os.getenv('FinancialAIKey')
 
-# loader = DirectoryLoader('C:/Users/Dan/source/repos/financial-ai-1/pdf_documents/', glob="./*.pdf", loader_cls=PyPDFLoader)
-# documents = loader.load()
 
-loader = DirectoryLoader('C:/Users/Dan/source/repos/financial-ai-1/txt_documents/', glob="./*.txt", loader_cls=TextLoader)
+if sys.argv[1] == "pdf":
+    path = 'C:/Users/Dan/source/repos/financial-ai-1/pdf_documents/'
+    glob = "./*.pdf"
+    loader_cls = PyPDFLoader
+elif sys.argv[1] == "word":
+    path = 'C:/Users/Dan/source/repos/financial-ai-1/txt_documents/'
+    glob = "./*.txt"
+    loader_cls = TextLoader
+else:
+    raise TypeError("Please specify either a 'pdf' or 'text' value.")
+
+
+loader = DirectoryLoader(path=path, glob=glob, loader_cls=loader_cls)
 documents = loader.load()
 
 tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")

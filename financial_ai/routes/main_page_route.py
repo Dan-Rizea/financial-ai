@@ -12,5 +12,3 @@ async def render_main_page():
         return processed_activity
     else:
         return render_template('index.html')
-
-
