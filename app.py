@@ -1,6 +1,6 @@
 """Main starting point"""
 from flask import Flask
-from financial_ai.routes import api_bp, html_bp
+from financial_ai.routes import html_bp
 from config import Config
 
 # Init app
